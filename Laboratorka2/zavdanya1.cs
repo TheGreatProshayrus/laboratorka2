@@ -8,7 +8,7 @@ namespace Laboratorka2
 
         public string index; // индекс
 
-        public string country;     // страна
+        public string country;     // Страна
 
         public string city;     // город
 
