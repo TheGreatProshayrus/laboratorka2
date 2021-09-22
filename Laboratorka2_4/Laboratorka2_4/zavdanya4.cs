@@ -2,147 +2,97 @@
 
 namespace Laboratorka2_3
 {
-    class Book
-
+    class Point
     {
-        public class Title
+        string name;
+        int x, y;
+        public int X
         {
-
-            public string title ;
-
-            public void Show()
-            {        
-
-                if (title == "")
-                {
-                    title = "Гарри Поттер";
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.WriteLine($"{title}\n\n");
-                }
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.WriteLine($"{title}\n\n");
-                }
-            }
-        }
-
-        public class Author
-        {
-
-            public string author;
-
-            public void Show()
+            get
             {
-
-                if (author == "")
-                {
-                    author = "Джоан Роулинг";
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine($"Книга написана автором {author}\n");
-                }
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine($"Книга написана автором {author}\n");
-                }
+                return x;
             }
         }
-        public class Content
+        public int Y
         {
-
-            public string content ;
-
-
-                public void Show()
-                {
-                    if (content == "")
-                    {
-                        content = "Мальчик-маг, магия и приключения";
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine($"Книга написана о {content}\n");
-                        Console.ResetColor();
-                    }
-                    else
-                    {
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine($"Книга написана о {content}\n");
-                        Console.ResetColor();
-                    }
-                }
+            get
+            {
+                return y;
             }
-        
+        }
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+        }
+        public Point()
+            : this("", 0, 0) { }
+        public Point(string name, int x, int y)
+        {
+            Console.WriteLine("Введите букву стороны:");
+            this.name = Console.ReadLine();
+            Console.WriteLine("Введите X:");
+            this.x = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите Y:");
+            this.y = int.Parse(Console.ReadLine());
+        }
     }
-        /*
-        public double side1; // сторона 1
 
-        public double side2; // сторона 2
-
-        public Rectangle(double s1, double s2) { side1 = s1; side2 = s2; }
-
-        public void AreaCalculator()
+    class Figure
+    {
+        int number;
+        Point[] points;
+        string name;
+        public string Name
         {
-            double area = side1 * side2;
-            Console.WriteLine($"Площадь = {area}");
-        }
-
-        public void PeriemetrCalculator()
-
-        {
-            double periemeter = (side1 + side2) * 2;
-            Console.WriteLine($"Периметр = {periemeter}");
-        }
-        */
-
-        class Program
-
-        {   
-        /*
-            static string title;
-
-            static string author;
-
-            static string content;
-        */
-
-
-            static void Main(string[] args)
-
+            get
             {
-                
-                Book.Title t = new Book.Title();
-                Book.Author a = new Book.Author();
-                Book.Content c = new Book.Content();
-
-                Console.WriteLine("Введите название вашей книги");
-                t.title = Console.ReadLine();
-                Console.WriteLine("Введите имя автора");
-                a.author = Console.ReadLine();
-                Console.WriteLine("Введите содержимое");
-                c.content = Console.ReadLine();
-                Console.WriteLine("Ваша книга готова!\n");
-                t.Show();
-                a.Show();
-                c.Show();
-
-                /*
-                if (t1.Equals(typeof(double)) & t2.Equals(typeof(double)))
-                {
-                    Rectangle sqare = new Rectangle(s1, s2);
-
-                    sqare.AreaCalculator();
-
-                    sqare.PeriemetrCalculator();
-
-                }
-                else
-                {
-                    Console.WriteLine("не тот тип");
-
-                }
-                */
-
+                return name;
+            }
+            set
+            {
+                name = value;
             }
         }
-    
+        public void InitializeFigure()
+        {
+            Console.WriteLine("Введите количество сторон фигуры:");
+            number = int.Parse(Console.ReadLine());
+            points = new Point[number];
+            for (int i = 0; i < points.Length; i++)
+            {
+                points[i] = new Point();
+            }
+
+        }
+        public double LengthSide(Point a, Point b)
+        {
+            return Math.Sqrt(Math.Pow(a.X - b.X, 2) + Math.Pow(a.Y - b.Y, 2));
+        }
+        public double CalculatePerimeter()
+        {
+            double perimeter = 0;
+            for (int i = 1; i < points.Length; i++)
+            {
+                perimeter += this.LengthSide(points[i - 1], points[i]);
+            }
+            perimeter += this.LengthSide(points[0], points[points.Length - 1]);
+            return perimeter;
+        }
+        public Figure(string name)
+        {
+            InitializeFigure();
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Figure cube = new Figure("cube");
+            Console.WriteLine(cube.CalculatePerimeter());
+            Console.ReadKey();
+        }
+    }
 }
