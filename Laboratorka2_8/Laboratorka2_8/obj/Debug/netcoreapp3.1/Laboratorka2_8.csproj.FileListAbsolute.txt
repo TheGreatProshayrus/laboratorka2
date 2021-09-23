@@ -1,0 +1,14 @@
+E:\Lab 2\Laboratorka2\Laboratorka2_8\Laboratorka2_8\bin\Debug\netcoreapp3.1\Laboratorka2_8.exe
+E:\Lab 2\Laboratorka2\Laboratorka2_8\Laboratorka2_8\bin\Debug\netcoreapp3.1\Laboratorka2_8.deps.json
+E:\Lab 2\Laboratorka2\Laboratorka2_8\Laboratorka2_8\bin\Debug\netcoreapp3.1\Laboratorka2_8.runtimeconfig.json
+E:\Lab 2\Laboratorka2\Laboratorka2_8\Laboratorka2_8\bin\Debug\netcoreapp3.1\Laboratorka2_8.runtimeconfig.dev.json
+E:\Lab 2\Laboratorka2\Laboratorka2_8\Laboratorka2_8\bin\Debug\netcoreapp3.1\Laboratorka2_8.dll
+E:\Lab 2\Laboratorka2\Laboratorka2_8\Laboratorka2_8\bin\Debug\netcoreapp3.1\Laboratorka2_8.pdb
+E:\Lab 2\Laboratorka2\Laboratorka2_8\Laboratorka2_8\obj\Debug\netcoreapp3.1\Laboratorka2_8.csproj.AssemblyReference.cache
+E:\Lab 2\Laboratorka2\Laboratorka2_8\Laboratorka2_8\obj\Debug\netcoreapp3.1\Laboratorka2_8.GeneratedMSBuildEditorConfig.editorconfig
+E:\Lab 2\Laboratorka2\Laboratorka2_8\Laboratorka2_8\obj\Debug\netcoreapp3.1\Laboratorka2_8.AssemblyInfoInputs.cache
+E:\Lab 2\Laboratorka2\Laboratorka2_8\Laboratorka2_8\obj\Debug\netcoreapp3.1\Laboratorka2_8.AssemblyInfo.cs
+E:\Lab 2\Laboratorka2\Laboratorka2_8\Laboratorka2_8\obj\Debug\netcoreapp3.1\Laboratorka2_8.csproj.CoreCompileInputs.cache
+E:\Lab 2\Laboratorka2\Laboratorka2_8\Laboratorka2_8\obj\Debug\netcoreapp3.1\Laboratorka2_8.dll
+E:\Lab 2\Laboratorka2\Laboratorka2_8\Laboratorka2_8\obj\Debug\netcoreapp3.1\Laboratorka2_8.pdb
+E:\Lab 2\Laboratorka2\Laboratorka2_8\Laboratorka2_8\obj\Debug\netcoreapp3.1\Laboratorka2_8.genruntimeconfig.cache
